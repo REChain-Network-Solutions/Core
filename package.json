@@ -1,0 +1,57 @@
+{
+  "name": "Core",
+  "description": "REChain Core",
+  "author": "REChain",
+  "version": "0.4.0",
+  "keywords": [
+    "REChain",
+    "REChainNetwork",
+    "RECH",
+    "$RECH",
+    "cryptocurrency",
+    "blockchain",
+    "smart contract",
+    "multisignature"
+  ],
+  "homepage": "",
+  "license": "MIT",
+  "repository": {
+    "url": "",
+    "type": "git"
+  },
+  "bugs": {
+    "url": ""
+  },
+  "browser": {
+    "request": "browser-request",
+    "secp256k1": "secp256k1/elliptic"
+  },
+  "dependencies": {
+    "async": "^2.6.1",
+    "decimal.js": "^10.0.2",
+    "bitcore-mnemonic": "~1.0.0",
+    "dotenv": "5.0.1",
+    "https-proxy-agent": "^5.0.0",
+    "jszip": "^3.1.3",
+    "level-rocksdb": "^5",
+    "lodash": "^4.6.1",
+    "moo": "0.5.1",
+    "mysql": "^2.10.2",
+    "nearley": "2.16.0",
+    "nodemailer": "^6.7.0",
+    "secp256k1": "^4",
+    "socks": "1.1.10",
+    "sqlite3": "^5",
+    "thirty-two": "^1.0.1",
+    "ws": "^1.0.1"
+  },
+  "scripts": {
+    "test": "yarn ava --timeout=60s --concurrency=1 --fail-fast --verbose",
+    "compileGrammar:oscript": "nearleyc ./formula/grammars/oscript.ne -o ./formula/grammars/oscript.js",
+    "compileGrammar:ojson": "nearleyc ./formula/grammars/ojson.ne -o ./formula/grammars/ojson.js"
+  },
+  "devDependencies": {
+    "ava": "^0.22.0",
+    "testcheck": "^1.0.0-rc.2"
+  }
+}
