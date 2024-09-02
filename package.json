@@ -29,7 +29,7 @@
   "dependencies": {
     "async": "^3.2.6",
     "decimal.js": "^10.0.2",
-    "bitcore-mnemonic": "~1.0.0",
+    "bitcore-mnemonic": "~10.3.0",
     "dotenv": "16.4.5",
     "https-proxy-agent": "^5.0.0",
     "jszip": "^3.1.3",
