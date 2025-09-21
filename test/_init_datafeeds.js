@@ -118,7 +118,7 @@ test.before(async t => {
 	await insertJoint('oXGOcA9TQx8Tl5Syjp1d5+mB4xicsRk3kbcE82YQAS0=', '{"unit":{"unit":"oXGOcA9TQx8Tl5Syjp1d5+mB4xicsRk3kbcE82YQAS0=","version":"1.0","alt":"1","witness_list_unit":"J8QFgTLI+3EkuAxX+eL6a0q114PJ4h4EOAiHAzxUp24=","last_ball_unit":"ichtuZ7mv93Jw26hksj8O4LnoNd8S+XCehVcFc8mbNg=","last_ball":"KQyKskSkOpGG839zVBKLbSe2Q6q+VJ2oh1m+46A0p1I=","headers_commission":344,"payload_commission":197,"main_chain_index":4123083,"timestamp":1553853204,"parent_units":["4ne7myhibBARgaA/PPwynnK408bmY7ypL/+X+tp0IqU="],"authors":[{"address":"TU3Q44S6H2WXTGQO6BZAGWFKKJCF7Q3W","authentifiers":{"r":"deqAMOAKyn4mDOZlyBd2eHMPrIXiT8BsVh7/Ejuii+kUm90CCrcWU0adsTWGHhj/7j7/LGZn7SLzzISQ93QRlA=="}}],"messages":[{"app":"payment","payload_hash":"24J5BXJrAfoOub2g/auiK04Z0x3LfQJq71Zsv8M8GVQ=","payload_location":"inline","payload":{"inputs":[{"unit":"ichtuZ7mv93Jw26hksj8O4LnoNd8S+XCehVcFc8mbNg=","message_index":0,"output_index":0}],"outputs":[{"address":"2VOBZNQPXAO4POCXEUZXUJSRD53OMOTH","amount":13729863},{"address":"TU3Q44S6H2WXTGQO6BZAGWFKKJCF7Q3W","amount":1543931896}]}}]},"ball":"nAgiWwtErFZ7Y2GNKbcrAJmN4qf4AeV++wlwNi1MTww="}');
 });
 
-test.after.always.cb(t => {
+test.afterEach.always(async () => {
 	console.log('===== after ' + app_data_dir);
 	kvstore.close(() => {
 		console.log("kvstore closed");
@@ -127,7 +127,6 @@ test.after.always.cb(t => {
 				console.log('db destroy result: '+(err || 'ok'));
 				db.close(() => {
 					// shell('rm -r ' + app_data_dir); // was throwing errors on Windows, now old data gets deleted before each run
-					t.end();
 				});
 			});
 		}, 100);

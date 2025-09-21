@@ -1,0 +1,19 @@
+# Code owners for the project
+
+# Web3 helper files
+/web3_helper.js @web3-team
+
+# Web4 integration files
+/web4_integration.js @web4-team
+
+# Web5 helper files
+/web5_helper.js @web5-team
+
+# Web6 helper files
+/web6_helper.js @web6-team
+
+# Tests
+/test/** @qa-team
+
+# Documentation
+/docs/** @docs-team

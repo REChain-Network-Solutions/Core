@@ -2,20 +2,22 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+We actively maintain and support the following versions of this project:
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+- Main branch (latest)
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability within this project, please send an email to the security team at security@example.com. All security vulnerabilities will be promptly addressed.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+## Security Best Practices
+
+- Keep dependencies up to date.
+- Use environment variables for sensitive information such as API keys.
+- Validate and sanitize all inputs.
+- Use HTTPS for all network communications.
+- Regularly audit and review code for security issues.
+
+## Responsible Disclosure
+
+We appreciate responsible disclosure of security issues. Please do not publicly disclose vulnerabilities until they have been addressed.

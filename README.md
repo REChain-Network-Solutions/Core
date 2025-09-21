@@ -44,6 +44,40 @@ This is a library used in our clients clients. Some of the clients that require 
 * [<sub>REChain</sub> Relay]() - Relay node for <sub>REChain</sub> Network. It doesn't hold any private keys.
 * [<sub>REChain</sub> Hub]() - hub for <sub>REChain</sub> Network. Includes the relay, plus can store and forward end-to-end encrypted messages among devices on the <sub>REChain</sub> Network.
 
+## Web3 and Web5 Integrations
+
+Starting from version 0.5.0, REChain Core includes support for Web3 and Web5 technologies to enhance interoperability and decentralized features.
+
+### Web3 Integration
+
+Web3.js is integrated to enable interactions with Ethereum and other EVM-compatible blockchains. This allows REChain to:
+- Interact with smart contracts on Ethereum
+- Bridge assets between REChain and Ethereum networks
+- Enable cross-chain transactions
+
+Example usage:
+```javascript
+const { Web3 } = require('web3');
+const web3 = new Web3('https://mainnet.infura.io/v3/YOUR_INFURA_KEY');
+// Use web3 to interact with Ethereum contracts
+```
+
+### Web5 Integration
+
+Web5 API is included for decentralized identity and data management. This provides:
+- Decentralized Identifiers (DIDs) for secure identity management
+- Decentralized Web Nodes (DWNs) for data storage and messaging
+- Verifiable Credentials for trust and verification
+
+Example usage:
+```javascript
+const { Web5 } = require('@web5/api');
+const web5 = new Web5();
+// Create and manage DIDs, store data on DWNs
+```
+
+These integrations position REChain at the forefront of Web3 and Web5 adoption, enabling seamless interoperability with other blockchain networks and decentralized web applications.
+
 ## Developer guides
 
 See the [Developer resources site](). Also, you'll find loads of examples in other [<sub>REChain</sub> repositories](). For internal APIs, see the `exports` of node.js modules.

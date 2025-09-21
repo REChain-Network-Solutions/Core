@@ -16,7 +16,11 @@ desktop_app.getAppDataDir = function() { return __dirname + '/.testdata-' + path
 
 // cleanup, if last time failed
 var dst_dir = __dirname + '/.testdata-' + path.basename(__filename);
-shell('rm -rf ' + dst_dir);
+try {
+    fs.rmdirSync(dst_dir, { recursive: true });
+} catch (e) {
+    // ignore if doesn't exist
+}
 
 var Decimal = require('decimal.js');
 var formulaParser = require('../formula/index');
