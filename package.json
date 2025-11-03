@@ -30,7 +30,7 @@
     "@web5/api": "^0.12.0",
     "async": "^3.2.6",
     "axios": "^1.12.2",
-    "bitcore-mnemonic": "~11.3.2",
+    "bitcore-mnemonic": "~11.4.0",
     "decimal.js": "^10.0.2",
     "dotenv": "17.2.3",
     "https-proxy-agent": "^7.0.5",
