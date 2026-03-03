@@ -54,7 +54,7 @@
     "compileGrammar:ojson": "nearleyc ./formula/grammars/ojson.ne -o ./formula/grammars/ojson.js"
   },
   "devDependencies": {
-    "ava": "^6.1.3",
+    "ava": "^7.0.0",
     "mocha": "^11.7.2",
     "sinon": "^21.0.0",
     "testcheck": "^1.0.0-rc.2"
